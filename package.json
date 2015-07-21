@@ -1,7 +1,14 @@
 {
   "author": "Anurag Simgeker",
   "name": "prosandcons",
+  "main": "server.js",
   "version": "0.0.1",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node server"
+  },
   "homepage": "https://github.com/anuragsimgeker/ProsAndCons",
   "licenses": {
     "type": "MIT",
@@ -12,7 +19,11 @@
     "type": "git",
     "url": "git@github.com:anuragsimgeker/ProsAndCons.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "compression": "^1.5.1",
+    "express": "^4.13.1",
+    "path": "^0.11.14"
+  },
   "devDependencies": {
     "coveralls": "^2.11.3",
     "grunt": "~0.4.5",
