@@ -1,0 +1,26 @@
+<md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools">
+    <md-button ng-click="toggleLeftnav()" class="md-icon-button" aria-label="Settings">
+      <md-icon md-font-icon="fa-bars" class="fa md-headline"></md-icon>
+    </md-button>
+    <div class="md-display-1 logo">
+      Pros &amp; Cons
+    </div>
+    <span flex></span>
+
+    <md-button ng-href="http://github.com/anuragsimgeker" target="_blank" class="md-icon-button" aria-label="Settings">
+      <md-icon md-font-icon="fa-github" class="fa md-headline"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<div layout="row">
+  <md-list flex>
+    <md-subheader class="md-no-sticky"><h1>Lists</h1></md-subheader>
+    <md-list-item ng-repeat="list in lists track by $index" ng-click="goToList($index)" class="list-item">
+      <p>{{ list.title }} <small class="display-block">Updated: {{ list.lastUpdated | date }}</small></p>
+      <md-icon md-font-icon="fa-trash-o" class="fa md-headline" ng-click="deleteList($index, $event)" aria-label="Delete" class="md-secondary md-hue-3"></md-icon>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+</div>

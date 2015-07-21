@@ -1,0 +1,11 @@
+{
+  "name": "prosandcons",
+  "version": "0.3.2",
+  "devDependencies": {
+    "angular": "~1.4.3",
+    "angular-mocks": "~1.4.3",
+    "angular-ui-router": "~0.2",
+    "angular-local-storage": "~0.2.2",
+    "angular-material": "~0.10.0"
+  }
+}

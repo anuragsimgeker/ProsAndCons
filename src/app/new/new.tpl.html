@@ -1,0 +1,78 @@
+<md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools">
+    <md-button ng-click="toggleLeftnav()" class="md-icon-button" aria-label="Settings">
+      <md-icon md-font-icon="fa-bars" class="fa md-headline"></md-icon>
+    </md-button>
+    <div class="md-display-1">
+      <input ng-model="title" class="transparent" placeholder="Pros &amp; Cons of&hellip;" />
+    </div>
+    <span flex></span>
+    <h2>
+      <span ng-if="prosTotal > consTotal">Winning: Pros</span>
+      <span ng-if="prosTotal < consTotal">Winning: Cons</span>
+      <span ng-if="prosTotal === consTotal">Draw</span>
+    </h2>
+  </div>
+</md-toolbar>
+
+<div layout="row" layout-align="space-around center">
+  <h1><md-icon md-font-icon="fa-check" class="fa f-c-success" aria-label="Pros"></md-icon></h1>
+  <div ng-if="false">
+    <md-icon md-font-icon="fa-trophy" class="fa md-display-1" aria-label="Winner"></md-icon>
+    <div class="absolute">Draw</div>
+  </div>
+  <h1><md-icon md-font-icon="fa-times" class="fa f-c-danger" aria-label="Cons"></md-icon></h1>
+</div>
+
+<form name="newForm" layout="row" novalidate>
+
+  <div class="pros list-wrapper" flex="50">
+    <md-list class="pros-list">
+
+      <md-list-item ng-repeat="pro in pros track by $index">
+        <md-input-container flex>
+          <label>Pro # {{ $index+1 }}</label>
+          <input ng-model="pro.title" required>
+          <div ng-messages="newForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-slider flex="20" min="1" max="5" ng-model="pro.weight" aria-label="Weight"></md-slider>
+      </md-list-item>
+
+      <md-list-item>
+        <md-input-container flex>
+          <label>Enter a pro</label>
+          <input ng-model="newPro" on-enter="addPro()">
+        </md-input-container>
+      </md-list-item>
+    </md-list>
+  </div>
+
+  <div class="cons list-wrapper" flex="50">
+    <md-list class="cons-list">
+
+      <md-list-item ng-repeat="con in cons track by $index">
+        <md-input-container flex>
+          <label>Con # {{ $index+1 }}</label>
+          <input ng-model="con.title">
+        </md-input-container>
+        <md-slider flex="20" min="1" max="5" ng-model="con.weight" aria-label="Weight"></md-slider>
+      </md-list-item>
+
+      <md-list-item>
+        <md-input-container flex>
+          <label>Enter a con</label>
+          <input ng-model="newCon" on-enter="addCon()">
+        </md-input-container>
+      </md-list-item>
+    </md-list>
+  </div>
+
+</form>
+
+<div layout="row" layout-align="end end" class="fixed-bottom">
+  <md-button ng-click="save()" aria-label="menu" class="md-fab md-warn m-b-30 m-r-30">
+    <md-icon md-font-icon="fa-floppy-o" class="fa md-headline"></md-icon>
+  </md-button>
+</div>

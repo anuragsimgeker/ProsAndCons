@@ -1,0 +1,75 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+// @import '../../vendor/bootstrap/less/bootstrap.less';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Playball);
+
+@import 'variables.less';
+@import 'atomic.less';
+
+md-icon {
+  width: auto;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+      text-decoration: none;
+  }
+}
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using.
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+@import '../app/new/new.less';
+
+.logo {
+  font-family: 'Playball', cursive !important;
+}
+
+.leftnavLogo {
+  font-weight: 400;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 64px;
+  max-height: 64px;
+  padding: 0 16px;
+  margin: 0;
+  letter-spacing: 0.005em;
+}
+
+.list-item {
+  background-color: white;
+}
+
