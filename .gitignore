@@ -1,5 +1,7 @@
+*.sw*
+*~
+.bower-*/
 node_modules/
 build/
-.bower-*/
 vendor/
 bin/
