@@ -11,7 +11,7 @@ Install Node.js and then:
 ```sh
 $ git clone git@github.com:anuragsimgeker/ProsAndCons.git
 $ cd ProsAndCons
-$ npm -g install grunt-cli karma bower
+$ npm -g install grunt-cli karma bower phantomjs
 $ npm install
 $ bower install
 $ grunt watch
