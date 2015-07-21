@@ -1,4 +1,4 @@
-# [Pros & Cons](https://github.com/anuragsimgeker/ProsAndCons) [![Build Status](https://api.travis-ci.org/anuragsimgeker/ProsAndCons.png)](https://travis-ci.org/anuragsimgeker/ProsAndCons)
+# [Pros & Cons](https://github.com/anuragsimgeker/ProsAndCons) [![Build Status](https://api.travis-ci.org/anuragsimgeker/ProsAndCons.png)](https://travis-ci.org/anuragsimgeker/ProsAndCons) [![Coverage Status](https://coveralls.io/repos/anuragsimgeker/ProsAndCons/badge.svg?branch=master&service=github)](https://coveralls.io/github/anuragsimgeker/ProsAndCons?branch=master)
 
 A modern pros and cons list web app built in [AngularJS](http://angularjs.org).
 
