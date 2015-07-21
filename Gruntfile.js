@@ -16,7 +16,6 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-html2js');
-  grunt.loadNpmTasks('grunt-karma-coveralls');
 
   /**
    * Load in our build configuration file.
@@ -481,16 +480,6 @@ module.exports = function ( grunt ) {
           livereload: false
         }
       }
-    },
-
-    coveralls: {
-        options: {
-            debug: true,
-            coverageDir: 'coverage',
-            dryRun: true,
-            force: true,
-            recursive: true
-        }
     }
   };
 
