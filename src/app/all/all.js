@@ -51,8 +51,11 @@ angular.module( 'ngBoilerplate.all', [
 
   $scope.deleteList = function (listId, e) {
     e.stopPropagation();
-    if (!prosAndConsService.remove(listId)) {
+    if (prosAndConsService.remove(listId)) {
       alert('Unable to delete');
+    }
+    else {
+      $scope.lists = prosAndConsService.all();
     }
   };
 })

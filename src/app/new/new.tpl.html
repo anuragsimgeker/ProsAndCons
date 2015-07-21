@@ -33,9 +33,6 @@
         <md-input-container flex>
           <label>Pro # {{ $index+1 }}</label>
           <input ng-model="pro.title" required>
-          <div ng-messages="newForm.clientName.$error">
-            <div ng-message="required">This is required.</div>
-          </div>
         </md-input-container>
         <md-slider flex="20" min="1" max="5" ng-model="pro.weight" aria-label="Weight"></md-slider>
       </md-list-item>

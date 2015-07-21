@@ -22,5 +22,8 @@
       <md-icon md-font-icon="fa-trash-o" class="fa md-headline" ng-click="deleteList($index, $event)" aria-label="Delete" class="md-secondary md-hue-3"></md-icon>
       <md-divider></md-divider>
     </md-list-item>
+    <md-list-item ng-if="lists.length === 0" class="list-item">
+      <p>You do not have any lists created. <a ui-sref="new">Click here to create a new one</a></p>
+    </md-list-item>
   </md-list>
 </div>
