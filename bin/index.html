@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@asimgeker">
+    <meta name="twitter:title" content="prosAndCons">
+    <meta name="twitter:description" content="A pros and cons list web app">
+    <meta name="twitter:creator" content="@asimgeker">
+    <meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
+    <meta property="og:title" content="prosAndCons" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/anuragsimgeker/ProsAndCons" />
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+    <meta property="og:description" content="A pros and cons list web app">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="assets/prosandcons-0.0.1.css" />
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="assets/prosandcons-0.0.1.js"></script>
+  </head>
+  <body>
+
+    <!-- Leftnav -->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="leftnav">
+      <md-toolbar>
+        <h1 class="leftnavLogo md-display-1 logo">Pros &amp; Cons</h1>
+      </md-toolbar>
+      <md-content layout-padding>
+        <md-list>
+          <md-list-item class="md-1-line" ng-click="mdSidenav('leftnav').toggle()">
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-font-icon="fa-plus" class="fa md-headline"></md-icon>
+            </md-button>
+            <a ui-sref="new">New list</a>
+          </md-list-item>
+          <md-divider></md-divider>
+          <md-list-item class="md-1-line" ng-click="mdSidenav('leftnav').toggle()">
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-font-icon="fa-list-ol" class="fa md-headline"></md-icon>
+            </md-button>
+            <a ui-sref="all">My lists</a>
+          </md-list-item>
+        </md-list>
+      </md-content>
+    </md-sidenav>
+
+    <!-- Main content -->
+    <md-content ui-view="main"/>
+  </body>
+</html>
