@@ -1,7 +1,7 @@
 *.sw*
 *~
 .bower-*/
-node_modules/
-build/
-vendor/
-coverage/
+/node_modules/
+/build/
+/vendor/
+/coverage/
